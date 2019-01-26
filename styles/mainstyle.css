@@ -1,0 +1,28 @@
+.stocks>span {
+    margin-left: 20%;
+}
+
+.lf {
+    float: left;
+}
+
+#rt {
+    margin-left: 10%;
+}
+
+.st>span {
+    margin-left: 8%;
+}
+
+#status {
+    height: 0.2em;
+}
+
+#filtsrch {
+    max-height: 10px;
+    overflow: hidden;
+}
+
+#dip {
+    background-color: #e4f4ec;
+}

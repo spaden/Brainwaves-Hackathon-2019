@@ -1,0 +1,62 @@
+<div style="background-color:  #d4e5dd ;" class="container-fluid">
+    <br>
+    <div class="row">
+        <span><div id="dthr"></div></span>
+        <div class="col-md-3">
+            <div class="input-group">
+
+                <input id="company" list="filtsrch" type="text" class="form-control" placeholder="Search here">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" ng-click="go($event)">Search</button>
+        </div>
+    </div>
+    <br>
+</div>
+
+<br><br>
+<div class="container-fluid">
+    <div class="row">
+        <span class="col-md-4"></span>
+        <span class="col-md-8">
+                <i style="font-family: sans-serif">Click in the below desired list to view graph of a specific company</i>
+        
+        </span>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+        <span class="col-md-2 col-lg-2 col-xl-2 col-sm-2"></span>
+
+        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8">
+            <div class="stocks">
+                <b><i>Company </i></b><span>Date</span> <span>AVG(close) </span> <span>Change</span>
+
+            </div>
+            <br>
+
+            <div class="bx" id="{{data.symbol}}" ng-click="go2($event)" ng-repeat="data in ck">
+
+                <li class="stocks" style="list-style: none;">
+                    <div class="st row">
+                        <i class="col-md-2">{{data.symbol}}</i>
+                        <span class="col-md-2">{{data.data | limitTo : 11}}</span>
+                        <span class="col-md-2">{{data.close | limitTo : 7}}</span>
+                        <span class="col-md-2"><span><img style="height: 1.6em; margin-right: 0.6em;" src={{data.img}}>    </span>{{data.change | limitTo : 5}}</span>
+                    </div>
+
+                </li>
+                <hr>
+            </div>
+
+
+        </div>
+
+        <span class="col-md-2 col-lg-2 col-xl-2 col-sm-2"></span>
+
+    </div>
+
+
+
+</div>

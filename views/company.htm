@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
+    </div>
+    <hr>
+    <div class="row"> <br>
+        <hr>
+        <br>
+        <br>
+    </div>
+    <div class="row">
+        <span class="col-md-4"></span>
+        <span class="col-md-8">
+                <i>Click in the below desired list to view graph of a specific day</i>
+        
+        </span>
+    </div>
+    <div class="row" style="margin-top: 2%;">
+        <br>
+        <span class="col-md-2 col-lg-2 col-xl-2 col-sm-2"></span>
+        <div class="col-md-7 col-lg-7 col-sm-7 col-xs-7">
+            <div class="stocks" id="dip">
+                <i><b>CompanyNa</b></i><span>Date</span><span>Close</span><span>Change</span>
+
+            </div>
+            <br>
+
+            <div class="bx" id="{{data.id}}" ng-click="plot($event)" ng-repeat="data in ck">
+
+
+                <li class="stocks" style="list-style: none;">
+                    <div class="st row">
+                        <i class="col-md-2">{{data.symbol}}</i>
+                        <span class="col-md-2">{{data.data | limitTo : 11}}</span>
+
+                        <span class="col-md-2">{{data.close | limitTo : 7}}</span>
+                        <span class="col-md-2"><span><img style="height: 1.6em; margin-right: 0.6em;" src={{data.img}}>    </span>{{data.change | limitTo : 5}}</span>
+                    </div>
+
+                </li>
+                <hr>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
